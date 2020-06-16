@@ -1,0 +1,6 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+2019/06/06 14:54:29,44,打开App验证当前状态接口,200,OK,线程组1 1-1,text,true,,324,277,1,1,http://10.31.0.59/mobilefwd?verifytype=1&verifycontent=94EB15AA81375EAB60815A36FB4FF377&imsi=460076400106641&mobileos=0&version=122&timestamp=1559699469300,44,0,21
+2019/06/06 14:54:29,4,获取验证码接口,200,OK,线程组1 1-1,text,true,,330,217,1,1,http://10.31.0.59/verifycode?cellphone=13923811002&ty=false&version=122&timestamp=1559699469300,4,0,0
+2019/06/06 14:54:29,14,登录接口,200,OK,线程组1 1-1,text,true,,394,317,1,1,http://10.31.0.59/bind?cellphone=13923811002&verifycode=555555&deviceid=BD:90756B02225D29F91720E3E62F18B111&version=122&timestamp=1559699469300&brand=google+Pixel+2&model=google&sys_version=5.1.1,14,0,0
+2019/06/06 14:54:29,9,获取当前登录人员考勤规则接口,200,OK,线程组1 1-1,text,true,,2129,347,1,1,http://10.31.0.59/mobile?verifytype=1&verifycontent=90756B02225D29F91720E3E62F18B111&tenantid=6998B405000000016817A5EB90EC52EF&timestamp=1559699469300,9,0,0
+2019/06/06 14:54:29,28,提交签到信息（判断当前签到的条件）接口,200,OK,线程组1 1-1,text,true,,676,567,1,1,http://10.31.0.59:80/mobile/check?verifytype=1&verifycontent=90756B02225D29F91720E3E62F18B111&tenantid=6998B405000000016817A5EB90EC52EF&timestamp=1559699469300,28,0,0

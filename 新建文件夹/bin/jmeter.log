@@ -1,0 +1,360 @@
+2019/11/18 10:32:14 INFO  - jmeter.util.JMeterUtils: Setting Locale to zh_CN 
+2019/11/18 10:32:14 INFO  - jmeter.JMeter: Loading user properties from: E:\久其软件\自动化测试\Jmeter\Jmeter-Ant\新建文件夹\bin\user.properties 
+2019/11/18 10:32:14 INFO  - jmeter.JMeter: Loading system properties from: E:\久其软件\自动化测试\Jmeter\Jmeter-Ant\新建文件夹\bin\system.properties 
+2019/11/18 10:32:14 INFO  - jmeter.JMeter: Copyright (c) 1998-2016 The Apache Software Foundation 
+2019/11/18 10:32:14 INFO  - jmeter.JMeter: Version 3.1 r1770033 
+2019/11/18 10:32:14 INFO  - jmeter.JMeter: java.version=1.8.0_181 
+2019/11/18 10:32:14 INFO  - jmeter.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM 
+2019/11/18 10:32:14 INFO  - jmeter.JMeter: os.name=Windows 7 
+2019/11/18 10:32:14 INFO  - jmeter.JMeter: os.arch=amd64 
+2019/11/18 10:32:14 INFO  - jmeter.JMeter: os.version=6.1 
+2019/11/18 10:32:14 INFO  - jmeter.JMeter: file.encoding=GBK 
+2019/11/18 10:32:14 INFO  - jmeter.JMeter: Max memory     =523763712 
+2019/11/18 10:32:14 INFO  - jmeter.JMeter: Available Processors =4 
+2019/11/18 10:32:14 INFO  - jmeter.JMeter: Default Locale=中文 (中国) 
+2019/11/18 10:32:14 INFO  - jmeter.JMeter: JMeter  Locale=中文 (中国) 
+2019/11/18 10:32:14 INFO  - jmeter.JMeter: JMeterHome=E:\久其软件\自动化测试\Jmeter\Jmeter-Ant\新建文件夹 
+2019/11/18 10:32:14 INFO  - jmeter.JMeter: user.dir  =E:\久其软件\自动化测试\Jmeter\Jmeter-Ant\新建文件夹\bin 
+2019/11/18 10:32:14 INFO  - jmeter.JMeter: PWD       =E:\久其软件\自动化测试\Jmeter\Jmeter-Ant\新建文件夹\bin 
+2019/11/18 10:32:14 INFO  - jmeter.JMeter: IP: 169.254.18.99 Name: jq-PC FullName: jq-PC 
+2019/11/18 10:32:14 INFO  - jmeter.gui.action.LookAndFeelCommand: Using look and feel: javax.swing.plaf.metal.MetalLookAndFeel [Metal, CrossPlatform] 
+2019/11/18 10:32:14 INFO  - jmeter.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties 
+2019/11/18 10:32:14 INFO  - jmeter.engine.util.CompoundVariable: Note: Function class names must contain the string: '.functions.' 
+2019/11/18 10:32:14 INFO  - jmeter.engine.util.CompoundVariable: Note: Function class names must not contain the string: '.gui.' 
+2019/11/18 10:32:15 INFO  - jmeter.util.BSFTestElement: Registering JMeter version of JavaScript engine as work-round for BSF-22 
+2019/11/18 10:32:15 INFO  - jmeter.protocol.http.sampler.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser 
+2019/11/18 10:32:15 INFO  - jmeter.protocol.http.sampler.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser 
+2019/11/18 10:32:15 INFO  - jmeter.protocol.http.sampler.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser 
+2019/11/18 10:32:15 INFO  - jmeter.protocol.http.sampler.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser 
+2019/11/18 10:32:15 INFO  - jmeter.protocol.http.sampler.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser 
+2019/11/18 10:32:15 INFO  - jmeter.protocol.http.sampler.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser 
+2019/11/18 10:32:15 INFO  - jorphan.exec.KeyToolUtils: keytool found at 'keytool' 
+2019/11/18 10:32:15 INFO  - jmeter.protocol.http.proxy.ProxyControl: HTTP(S) Test Script Recorder SSL Proxy will use keys that support embedded 3rd party resources in file E:\久其软件\自动化测试\Jmeter\Jmeter-Ant\新建文件夹\bin\proxyserver.jks 
+2019/11/18 10:32:16 INFO  - jmeter.samplers.SampleResult: Note: Sample TimeStamps are START times 
+2019/11/18 10:32:16 INFO  - jmeter.samplers.SampleResult: sampleresult.default.encoding is set to ISO-8859-1 
+2019/11/18 10:32:16 INFO  - jmeter.samplers.SampleResult: sampleresult.useNanoTime=true 
+2019/11/18 10:32:16 INFO  - jmeter.samplers.SampleResult: sampleresult.nanoThreadSleep=5000 
+2019/11/18 10:33:09 INFO  - jmeter.services.FileServer: Default base='E:\久其软件\自动化测试\Jmeter\Jmeter-Ant\新建文件夹\bin' 
+2019/11/18 10:33:09 INFO  - jmeter.gui.action.Load: Loading file: C:\Users\Administrator.jq-PC\Desktop\sms\MongoDB Script (DEPRECATED)2.jmx 
+2019/11/18 10:33:09 INFO  - jmeter.services.FileServer: Set new base='C:\Users\Administrator.jq-PC\Desktop\sms' 
+2019/11/18 10:33:09 INFO  - jmeter.save.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2 
+2019/11/18 10:33:09 INFO  - jmeter.save.SaveService: Using SaveService properties file encoding UTF-8 
+2019/11/18 10:33:09 INFO  - jmeter.save.SaveService: Using SaveService properties version 3.1 
+2019/11/18 10:33:09 INFO  - jmeter.save.SaveService: All converter versions present and correct 
+2019/11/18 10:33:09 INFO  - jmeter.save.SaveService: Loading file: C:\Users\Administrator.jq-PC\Desktop\sms\MongoDB Script (DEPRECATED)2.jmx 
+2019/11/18 10:33:09 WARN  - jmeter.gui.action.Load: Unexpected error java.lang.IllegalArgumentException: Problem loading XML from:'C:\Users\Administrator.jq-PC\Desktop\sms\MongoDB Script (DEPRECATED)2.jmx', missing class com.thoughtworks.xstream.converters.ConversionException: 
+---- Debugging information ----
+cause-exception     : com.thoughtworks.xstream.converters.ConversionException
+cause-message       : 
+first-jmeter-class  : org.apache.jmeter.save.converters.HashTreeConverter.unmarshal(HashTreeConverter.java:67)
+class               : org.apache.jmeter.save.ScriptWrapper
+required-type       : org.apache.jorphan.collections.ListedHashTree
+converter-type      : org.apache.jmeter.save.ScriptWrapperConverter
+path                : /jmeterTestPlan/hashTree/hashTree/hashTree/hashTree[5]/kg.apc.jmeter.vizualizers.CorrectedResultCollector
+line number         : 353
+version             : 3.1 r1770033
+-------------------------------
+	at org.apache.jmeter.save.SaveService.readTree(SaveService.java:537)
+	at org.apache.jmeter.save.SaveService.loadTree(SaveService.java:505)
+	at org.apache.jmeter.gui.action.Load.loadProjectFile(Load.java:130)
+	at org.apache.jmeter.gui.action.Load.loadProjectFile(Load.java:102)
+	at org.apache.jmeter.gui.action.Load.doActionAfterCheck(Load.java:89)
+	at org.apache.jmeter.gui.action.AbstractActionWithNoRunningTest.doAction(AbstractActionWithNoRunningTest.java:45)
+	at org.apache.jmeter.gui.action.ActionRouter.performAction(ActionRouter.java:80)
+	at org.apache.jmeter.gui.action.ActionRouter.access$000(ActionRouter.java:40)
+	at org.apache.jmeter.gui.action.ActionRouter$1.run(ActionRouter.java:62)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+Caused by: com.thoughtworks.xstream.converters.ConversionException: 
+---- Debugging information ----
+cause-exception     : com.thoughtworks.xstream.converters.ConversionException
+cause-message       : 
+first-jmeter-class  : org.apache.jmeter.save.converters.HashTreeConverter.unmarshal(HashTreeConverter.java:67)
+class               : org.apache.jmeter.save.ScriptWrapper
+required-type       : org.apache.jorphan.collections.ListedHashTree
+converter-type      : org.apache.jmeter.save.ScriptWrapperConverter
+path                : /jmeterTestPlan/hashTree/hashTree/hashTree/hashTree[5]/kg.apc.jmeter.vizualizers.CorrectedResultCollector
+line number         : 353
+version             : 3.1 r1770033
+-------------------------------
+	at org.apache.jmeter.save.ScriptWrapperConverter.createConversionException(ScriptWrapperConverter.java:103)
+	at org.apache.jmeter.save.ScriptWrapperConverter.unmarshal(ScriptWrapperConverter.java:97)
+	at com.thoughtworks.xstream.core.TreeUnmarshaller.convert(TreeUnmarshaller.java:72)
+	at com.thoughtworks.xstream.core.AbstractReferenceUnmarshaller.convert(AbstractReferenceUnmarshaller.java:70)
+	at com.thoughtworks.xstream.core.TreeUnmarshaller.convertAnother(TreeUnmarshaller.java:66)
+	at com.thoughtworks.xstream.core.TreeUnmarshaller.convertAnother(TreeUnmarshaller.java:50)
+	at com.thoughtworks.xstream.core.TreeUnmarshaller.start(TreeUnmarshaller.java:134)
+	at com.thoughtworks.xstream.core.AbstractTreeMarshallingStrategy.unmarshal(AbstractTreeMarshallingStrategy.java:32)
+	at com.thoughtworks.xstream.XStream.unmarshal(XStream.java:1230)
+	at com.thoughtworks.xstream.XStream.unmarshal(XStream.java:1214)
+	at com.thoughtworks.xstream.XStream.fromXML(XStream.java:1085)
+	at org.apache.jmeter.save.SaveService.readTree(SaveService.java:522)
+	... 22 more
+Caused by: com.thoughtworks.xstream.converters.ConversionException: 
+---- Debugging information ----
+cause-exception     : com.thoughtworks.xstream.mapper.CannotResolveClassException
+cause-message       : kg.apc.jmeter.vizualizers.CorrectedResultCollector
+class               : org.apache.jorphan.collections.ListedHashTree
+required-type       : org.apache.jorphan.collections.ListedHashTree
+converter-type      : org.apache.jmeter.save.converters.HashTreeConverter
+path                : /jmeterTestPlan/hashTree/hashTree/hashTree/hashTree[5]/kg.apc.jmeter.vizualizers.CorrectedResultCollector
+line number         : 353
+-------------------------------
+	at com.thoughtworks.xstream.core.TreeUnmarshaller.convert(TreeUnmarshaller.java:79)
+	at com.thoughtworks.xstream.core.AbstractReferenceUnmarshaller.convert(AbstractReferenceUnmarshaller.java:70)
+	at com.thoughtworks.xstream.core.TreeUnmarshaller.convertAnother(TreeUnmarshaller.java:66)
+	at com.thoughtworks.xstream.core.TreeUnmarshaller.convertAnother(TreeUnmarshaller.java:50)
+	at com.thoughtworks.xstream.converters.collections.AbstractCollectionConverter.readItem(AbstractCollectionConverter.java:73)
+	at org.apache.jmeter.save.converters.HashTreeConverter.unmarshal(HashTreeConverter.java:67)
+	at com.thoughtworks.xstream.core.TreeUnmarshaller.convert(TreeUnmarshaller.java:72)
+	at com.thoughtworks.xstream.core.AbstractReferenceUnmarshaller.convert(AbstractReferenceUnmarshaller.java:70)
+	at com.thoughtworks.xstream.core.TreeUnmarshaller.convertAnother(TreeUnmarshaller.java:66)
+	at com.thoughtworks.xstream.core.TreeUnmarshaller.convertAnother(TreeUnmarshaller.java:50)
+	at com.thoughtworks.xstream.converters.collections.AbstractCollectionConverter.readItem(AbstractCollectionConverter.java:73)
+	at org.apache.jmeter.save.converters.HashTreeConverter.unmarshal(HashTreeConverter.java:67)
+	at com.thoughtworks.xstream.core.TreeUnmarshaller.convert(TreeUnmarshaller.java:72)
+	at com.thoughtworks.xstream.core.AbstractReferenceUnmarshaller.convert(AbstractReferenceUnmarshaller.java:70)
+	at com.thoughtworks.xstream.core.TreeUnmarshaller.convertAnother(TreeUnmarshaller.java:66)
+	at com.thoughtworks.xstream.core.TreeUnmarshaller.convertAnother(TreeUnmarshaller.java:50)
+	at com.thoughtworks.xstream.converters.collections.AbstractCollectionConverter.readItem(AbstractCollectionConverter.java:73)
+	at org.apache.jmeter.save.converters.HashTreeConverter.unmarshal(HashTreeConverter.java:67)
+	at com.thoughtworks.xstream.core.TreeUnmarshaller.convert(TreeUnmarshaller.java:72)
+	at com.thoughtworks.xstream.core.AbstractReferenceUnmarshaller.convert(AbstractReferenceUnmarshaller.java:70)
+	at com.thoughtworks.xstream.core.TreeUnmarshaller.convertAnother(TreeUnmarshaller.java:66)
+	at com.thoughtworks.xstream.core.TreeUnmarshaller.convertAnother(TreeUnmarshaller.java:50)
+	at org.apache.jmeter.save.ScriptWrapperConverter.unmarshal(ScriptWrapperConverter.java:95)
+	... 32 more
+Caused by: com.thoughtworks.xstream.mapper.CannotResolveClassException: kg.apc.jmeter.vizualizers.CorrectedResultCollector
+	at com.thoughtworks.xstream.mapper.DefaultMapper.realClass(DefaultMapper.java:81)
+	at com.thoughtworks.xstream.mapper.MapperWrapper.realClass(MapperWrapper.java:30)
+	at com.thoughtworks.xstream.mapper.DynamicProxyMapper.realClass(DynamicProxyMapper.java:55)
+	at com.thoughtworks.xstream.mapper.MapperWrapper.realClass(MapperWrapper.java:30)
+	at com.thoughtworks.xstream.mapper.PackageAliasingMapper.realClass(PackageAliasingMapper.java:88)
+	at com.thoughtworks.xstream.mapper.MapperWrapper.realClass(MapperWrapper.java:30)
+	at com.thoughtworks.xstream.mapper.ClassAliasingMapper.realClass(ClassAliasingMapper.java:79)
+	at com.thoughtworks.xstream.mapper.MapperWrapper.realClass(MapperWrapper.java:30)
+	at com.thoughtworks.xstream.mapper.MapperWrapper.realClass(MapperWrapper.java:30)
+	at com.thoughtworks.xstream.mapper.MapperWrapper.realClass(MapperWrapper.java:30)
+	at com.thoughtworks.xstream.mapper.MapperWrapper.realClass(MapperWrapper.java:30)
+	at com.thoughtworks.xstream.mapper.MapperWrapper.realClass(MapperWrapper.java:30)
+	at com.thoughtworks.xstream.mapper.MapperWrapper.realClass(MapperWrapper.java:30)
+	at com.thoughtworks.xstream.mapper.ArrayMapper.realClass(ArrayMapper.java:74)
+	at com.thoughtworks.xstream.mapper.MapperWrapper.realClass(MapperWrapper.java:30)
+	at com.thoughtworks.xstream.mapper.MapperWrapper.realClass(MapperWrapper.java:30)
+	at com.thoughtworks.xstream.mapper.MapperWrapper.realClass(MapperWrapper.java:30)
+	at com.thoughtworks.xstream.mapper.MapperWrapper.realClass(MapperWrapper.java:30)
+	at com.thoughtworks.xstream.mapper.MapperWrapper.realClass(MapperWrapper.java:30)
+	at com.thoughtworks.xstream.mapper.MapperWrapper.realClass(MapperWrapper.java:30)
+	at com.thoughtworks.xstream.mapper.MapperWrapper.realClass(MapperWrapper.java:30)
+	at com.thoughtworks.xstream.mapper.SecurityMapper.realClass(SecurityMapper.java:71)
+	at com.thoughtworks.xstream.mapper.MapperWrapper.realClass(MapperWrapper.java:30)
+	at com.thoughtworks.xstream.mapper.MapperWrapper.realClass(MapperWrapper.java:30)
+	at org.apache.jmeter.save.SaveService$XStreamWrapper$1.realClass(SaveService.java:98)
+	at com.thoughtworks.xstream.mapper.MapperWrapper.realClass(MapperWrapper.java:30)
+	at com.thoughtworks.xstream.mapper.CachingMapper.realClass(CachingMapper.java:47)
+	at com.thoughtworks.xstream.core.util.HierarchicalStreams.readClassType(HierarchicalStreams.java:29)
+	at com.thoughtworks.xstream.converters.collections.AbstractCollectionConverter.readItem(AbstractCollectionConverter.java:72)
+	at org.apache.jmeter.save.converters.HashTreeConverter.unmarshal(HashTreeConverter.java:67)
+	at com.thoughtworks.xstream.core.TreeUnmarshaller.convert(TreeUnmarshaller.java:72)
+	... 54 more
+
+2019/11/18 10:35:31 ERROR - jmeter.gui.action.Copy: Clipboard node read error:org.apache.jmeter.gui.tree.JMeterTreeNode; local class incompatible: stream classdesc serialVersionUID = 241, local class serialVersionUID = 240 java.io.IOException: org.apache.jmeter.gui.tree.JMeterTreeNode; local class incompatible: stream classdesc serialVersionUID = 241, local class serialVersionUID = 240
+	at sun.awt.datatransfer.DataTransferer.translateStream(Unknown Source)
+	at sun.awt.windows.WDataTransferer.translateStream(Unknown Source)
+	at sun.awt.datatransfer.DataTransferer.translateBytes(Unknown Source)
+	at sun.awt.windows.WDataTransferer.translateBytes(Unknown Source)
+	at sun.awt.datatransfer.SunClipboard.getData(Unknown Source)
+	at org.apache.jmeter.gui.action.Copy.getCopiedNodes(Copy.java:73)
+	at org.apache.jmeter.gui.action.Paste.doAction(Paste.java:62)
+	at org.apache.jmeter.gui.action.ActionRouter.performAction(ActionRouter.java:80)
+	at org.apache.jmeter.gui.action.ActionRouter.doActionNow(ActionRouter.java:113)
+	at org.apache.jmeter.gui.tree.JMeterTreeListener.keyPressed(JMeterTreeListener.java:230)
+	at java.awt.AWTEventMulticaster.keyPressed(Unknown Source)
+	at java.awt.Component.processKeyEvent(Unknown Source)
+	at javax.swing.JComponent.processKeyEvent(Unknown Source)
+	at java.awt.Component.processEvent(Unknown Source)
+	at java.awt.Container.processEvent(Unknown Source)
+	at java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.KeyboardFocusManager.redispatchEvent(Unknown Source)
+	at java.awt.DefaultKeyboardFocusManager.dispatchKeyEvent(Unknown Source)
+	at java.awt.DefaultKeyboardFocusManager.preDispatchKeyEvent(Unknown Source)
+	at java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(Unknown Source)
+	at java.awt.DefaultKeyboardFocusManager.dispatchEvent(Unknown Source)
+	at java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+
+2019/11/18 10:35:41 ERROR - jmeter.gui.action.Copy: Clipboard node read error:org.apache.jmeter.gui.tree.JMeterTreeNode; local class incompatible: stream classdesc serialVersionUID = 241, local class serialVersionUID = 240 java.io.IOException: org.apache.jmeter.gui.tree.JMeterTreeNode; local class incompatible: stream classdesc serialVersionUID = 241, local class serialVersionUID = 240
+	at sun.awt.datatransfer.DataTransferer.translateStream(Unknown Source)
+	at sun.awt.windows.WDataTransferer.translateStream(Unknown Source)
+	at sun.awt.datatransfer.DataTransferer.translateBytes(Unknown Source)
+	at sun.awt.windows.WDataTransferer.translateBytes(Unknown Source)
+	at sun.awt.datatransfer.SunClipboard.getData(Unknown Source)
+	at org.apache.jmeter.gui.action.Copy.getCopiedNodes(Copy.java:73)
+	at org.apache.jmeter.gui.action.Paste.doAction(Paste.java:62)
+	at org.apache.jmeter.gui.action.ActionRouter.performAction(ActionRouter.java:80)
+	at org.apache.jmeter.gui.action.ActionRouter.doActionNow(ActionRouter.java:113)
+	at org.apache.jmeter.gui.tree.JMeterTreeListener.keyPressed(JMeterTreeListener.java:230)
+	at java.awt.AWTEventMulticaster.keyPressed(Unknown Source)
+	at java.awt.Component.processKeyEvent(Unknown Source)
+	at javax.swing.JComponent.processKeyEvent(Unknown Source)
+	at java.awt.Component.processEvent(Unknown Source)
+	at java.awt.Container.processEvent(Unknown Source)
+	at java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.KeyboardFocusManager.redispatchEvent(Unknown Source)
+	at java.awt.DefaultKeyboardFocusManager.dispatchKeyEvent(Unknown Source)
+	at java.awt.DefaultKeyboardFocusManager.preDispatchKeyEvent(Unknown Source)
+	at java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(Unknown Source)
+	at java.awt.DefaultKeyboardFocusManager.dispatchEvent(Unknown Source)
+	at java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+
+2019/11/18 10:35:58 ERROR - jmeter.gui.action.Copy: Clipboard node read error:org.apache.jmeter.gui.tree.JMeterTreeNode; local class incompatible: stream classdesc serialVersionUID = 241, local class serialVersionUID = 240 java.io.IOException: org.apache.jmeter.gui.tree.JMeterTreeNode; local class incompatible: stream classdesc serialVersionUID = 241, local class serialVersionUID = 240
+	at sun.awt.datatransfer.DataTransferer.translateStream(Unknown Source)
+	at sun.awt.windows.WDataTransferer.translateStream(Unknown Source)
+	at sun.awt.datatransfer.DataTransferer.translateBytes(Unknown Source)
+	at sun.awt.windows.WDataTransferer.translateBytes(Unknown Source)
+	at sun.awt.datatransfer.SunClipboard.getData(Unknown Source)
+	at org.apache.jmeter.gui.action.Copy.getCopiedNodes(Copy.java:73)
+	at org.apache.jmeter.gui.action.Paste.doAction(Paste.java:62)
+	at org.apache.jmeter.gui.action.ActionRouter.performAction(ActionRouter.java:80)
+	at org.apache.jmeter.gui.action.ActionRouter.doActionNow(ActionRouter.java:113)
+	at org.apache.jmeter.gui.tree.JMeterTreeListener.keyPressed(JMeterTreeListener.java:230)
+	at java.awt.AWTEventMulticaster.keyPressed(Unknown Source)
+	at java.awt.Component.processKeyEvent(Unknown Source)
+	at javax.swing.JComponent.processKeyEvent(Unknown Source)
+	at java.awt.Component.processEvent(Unknown Source)
+	at java.awt.Container.processEvent(Unknown Source)
+	at java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.KeyboardFocusManager.redispatchEvent(Unknown Source)
+	at java.awt.DefaultKeyboardFocusManager.dispatchKeyEvent(Unknown Source)
+	at java.awt.DefaultKeyboardFocusManager.preDispatchKeyEvent(Unknown Source)
+	at java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(Unknown Source)
+	at java.awt.DefaultKeyboardFocusManager.dispatchEvent(Unknown Source)
+	at java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+
+2019/11/18 10:36:02 ERROR - jmeter.gui.action.Copy: Clipboard node read error:org.apache.jmeter.gui.tree.JMeterTreeNode; local class incompatible: stream classdesc serialVersionUID = 241, local class serialVersionUID = 240 java.io.IOException: org.apache.jmeter.gui.tree.JMeterTreeNode; local class incompatible: stream classdesc serialVersionUID = 241, local class serialVersionUID = 240
+	at sun.awt.datatransfer.DataTransferer.translateStream(Unknown Source)
+	at sun.awt.windows.WDataTransferer.translateStream(Unknown Source)
+	at sun.awt.datatransfer.DataTransferer.translateBytes(Unknown Source)
+	at sun.awt.windows.WDataTransferer.translateBytes(Unknown Source)
+	at sun.awt.datatransfer.SunClipboard.getData(Unknown Source)
+	at org.apache.jmeter.gui.action.Copy.getCopiedNodes(Copy.java:73)
+	at org.apache.jmeter.gui.action.Paste.doAction(Paste.java:62)
+	at org.apache.jmeter.gui.action.ActionRouter.performAction(ActionRouter.java:80)
+	at org.apache.jmeter.gui.action.ActionRouter.doActionNow(ActionRouter.java:113)
+	at org.apache.jmeter.gui.tree.JMeterTreeListener.keyPressed(JMeterTreeListener.java:230)
+	at java.awt.AWTEventMulticaster.keyPressed(Unknown Source)
+	at java.awt.Component.processKeyEvent(Unknown Source)
+	at javax.swing.JComponent.processKeyEvent(Unknown Source)
+	at java.awt.Component.processEvent(Unknown Source)
+	at java.awt.Container.processEvent(Unknown Source)
+	at java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.KeyboardFocusManager.redispatchEvent(Unknown Source)
+	at java.awt.DefaultKeyboardFocusManager.dispatchKeyEvent(Unknown Source)
+	at java.awt.DefaultKeyboardFocusManager.preDispatchKeyEvent(Unknown Source)
+	at java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(Unknown Source)
+	at java.awt.DefaultKeyboardFocusManager.dispatchEvent(Unknown Source)
+	at java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+

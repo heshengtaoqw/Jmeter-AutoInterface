@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.0 r1840935">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ProxyControl guiclass="ProxyControlGui" testclass="ProxyControl" testname="HTTP(S) Test Script Recorder" enabled="true">
+        <stringProp name="ProxyControlGui.port">7777</stringProp>
+        <collectionProp name="ProxyControlGui.exclude_list"/>
+        <collectionProp name="ProxyControlGui.include_list"/>
+        <boolProp name="ProxyControlGui.capture_http_headers">true</boolProp>
+        <intProp name="ProxyControlGui.grouping_mode">0</intProp>
+        <boolProp name="ProxyControlGui.add_assertion">false</boolProp>
+        <stringProp name="ProxyControlGui.sampler_type_name"></stringProp>
+        <boolProp name="ProxyControlGui.sampler_redirect_automatically">false</boolProp>
+        <boolProp name="ProxyControlGui.sampler_follow_redirects">true</boolProp>
+        <boolProp name="ProxyControlGui.use_keepalive">true</boolProp>
+        <boolProp name="ProxyControlGui.sampler_download_images">false</boolProp>
+        <intProp name="ProxyControlGui.proxy_http_sampler_naming_mode">0</intProp>
+        <stringProp name="ProxyControlGui.proxy_prefix_http_sampler_name"></stringProp>
+        <stringProp name="ProxyControlGui.proxy_pause_http_sampler"></stringProp>
+        <boolProp name="ProxyControlGui.notify_child_sl_filtered">false</boolProp>
+        <boolProp name="ProxyControlGui.regex_match">false</boolProp>
+        <stringProp name="ProxyControlGui.content_type_include"></stringProp>
+        <stringProp name="ProxyControlGui.content_type_exclude"></stringProp>
+        <stringProp name="ProxyControlGui.domains">localhost</stringProp>
+      </ProxyControl>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Recording Controller" enabled="true"/>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="67 /mobile/vefirication" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;cellphone&quot;:&quot;13948667369&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">10.31.0.245</stringProp>
+            <stringProp name="HTTPSampler.port">9966</stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
+            <stringProp name="HTTPSampler.path">/mobile/vefirication</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Cam-Charset" elementType="Header">
+                  <stringProp name="Header.name">Cam-Charset</stringProp>
+                  <stringProp name="Header.value">utf-8</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">text/plain; charset=UTF-8</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="68 /rqd/async?aid=217c2097-a086-44d1-9e12-2bafead3a77b" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="&#x8c;&#x8;âØ&#x99;jÉÊ|O&#x9e;é¢&#x7f;&#x84;°aèù&#xa;:µ&#xe; óHÃð«S·é&#xf;[5á¹³Õxp&#x9d;äz5ëFÐÖp&#x14;Ï?&#x9b;,&#xf;3&#x8c;&#x83;&#xf;&#x99;U#ø]9&#x9d;{2È&#x1f;ÿÔµX" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">&#x8c;&#x8;âØ&#x99;jÉÊ|O&#x9e;é¢&#x7f;&#x84;°aèù
+:µ&#xe; óHÃð«S·é&#xf;[5á¹³Õxp&#x9d;äz5ëFÐÖp&#x14;Ï?&#x9b;,&#xf;3&#x8c;&#x83;&#xf;&#x99;U#ø]9&#x9d;{2È&#x1f;ÿÔµX</stringProp>
+                  <stringProp name="Argument.value">ê¾&gt;ÌiiÏnÞY&#x80;ýÝEî\oRR¬&#x92;&#x86;ÒÈXa&#x1;¦NKP$mþ&#x80;&#x1e;{ÅËSàÓ&#x9a;[0&#x7;&#x86;Ì÷H9Ì¶&#x88;:j&#x11;Ò¯&#x19;&#x91;sï&#x11;&#x8b;ï&#x8b;&#x9c;Þ&#x4;W¤ßG+Gø?ÎÜ![»&#x1c;nÍ@P&quot;á&#x7f;âà¤Ô&#x86;8a&#x6;&#x8d;ÿ*&#x90;ÛG!&#x19;@¸</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="¾¡&#x85;&quot;*M¶&quot;Ð`&#x80;Ëò&#x1e;V&#x84;xs&#x19;&lt;+&#xd;8ÊóE&#x84;êK{~äþ:&#x8c;&#x80;&#xe;&#x85;7rõã&#x19;®[´&#x90;&#x9b;V&#x4;&#x9f;f" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">¾¡&#x85;&quot;*M¶&quot;Ð`&#x80;Ëò&#x1e;V&#x84;xs&#x19;&lt;+&#xd;8ÊóE&#x84;êK{~äþ:&#x8c;&#x80;&#xe;&#x85;7rõã&#x19;®[´&#x90;&#x9b;V&#x4;&#x9f;f</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata"></stringProp>
+                </elementProp>
+                <elementProp name="&#x9c;I&#x99;«&#x9d;n&#x96;&#xd;&#x86;cç`" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">&#x9c;I&#x99;«&#x9d;n&#x96;&#xd;&#x86;cç`</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata"></stringProp>
+                </elementProp>
+                <elementProp name="RCÔ³&#x9c;TÙ¯YËo®y&#x0;ý&#x11;ÄÆ8Kr[&#x85;¹¯þö&#x11;&#x85;¤&#xe;T&#x98;¡ÛÐÂ&#x1b;Nò¯&#x90;¹ÚY¤ëq&#x84;&#x92;&#x19;Ê #&#x12;&#xf;Å&#x2;ñ&#x84;&#x90;ô&#x8e;&#x1c;$y&#x8;&#xe;Z&apos;&#x13;&#x90;)º$&#xb;¢ÇVÁõÅ¶ßÒu&#xa;·P£1T&#x9d;9e&#x6;¡çt°Ó²¤ë;&#x1f;Ê&#x1e;&#x93;:Ïp?&#x1f;ð&#xf;oT·pSÙQVw&#x17;K7£%¬&#x9a;âîñ¾1HèõÇ&#x9f;ÎñÉ&#x82;²S&#x17;¶öá&#x87;5PU;¤&apos;Þ&#x95;üg&#x94;&#x98;d&#xe;ýLkóîõ&#x18;·ÉDúô&#x15;&#x93;~Ý&#x9a;Â;&#xd;Õ&#x16;&#x5;W¶ÐT&#x13;&quot;Ò[&#x95;Åé&#x9b;0|&#x13;MPÈv&#x95;&#x0;&#x8e;_&#x9e;Z|&#x90;¾ÀÈå`&#x9c;~&#x1a;Í&#x91;½uB&#x9d;å+q&#x4;$&#x7f;&#xa;(º1&#x15;Ý" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">RCÔ³&#x9c;TÙ¯YËo®y&#x0;ý&#x11;ÄÆ8Kr[&#x85;¹¯þö&#x11;&#x85;¤&#xe;T&#x98;¡ÛÐÂ&#x1b;Nò¯&#x90;¹ÚY¤ëq&#x84;&#x92;&#x19;Ê #&#x12;&#xf;Å&#x2;ñ&#x84;&#x90;ô&#x8e;&#x1c;$y&#x8;&#xe;Z&apos;&#x13;&#x90;)º$&#xb;¢ÇVÁõÅ¶ßÒu
+·P£1T&#x9d;9e&#x6;¡çt°Ó²¤ë;&#x1f;Ê&#x1e;&#x93;:Ïp?&#x1f;ð&#xf;oT·pSÙQVw&#x17;K7£%¬&#x9a;âîñ¾1HèõÇ&#x9f;ÎñÉ&#x82;²S&#x17;¶öá&#x87;5PU;¤&apos;Þ&#x95;üg&#x94;&#x98;d&#xe;ýLkóîõ&#x18;·ÉDúô&#x15;&#x93;~Ý&#x9a;Â;&#xd;Õ&#x16;&#x5;W¶ÐT&#x13;&quot;Ò[&#x95;Åé&#x9b;0|&#x13;MPÈv&#x95;&#x0;&#x8e;_&#x9e;Z|&#x90;¾ÀÈå`&#x9c;~&#x1a;Í&#x91;½uB&#x9d;å+q&#x4;$&#x7f;
+(º1&#x15;Ý</stringProp>
+                  <stringProp name="Argument.value">5T~G8³&#x81;&#x88;ýÝ&#x83;&#x9d;&#x87;[F¯àï&#x13;@&#x5;h&#x1d;pd&#x86;S7íá&#x99;&gt;­¨y&#x1a;km&#x15;p8^ê¤â*&#x97;±Ùûðñ&#x17;&#x2; B/¡s¾+!°÷´-&#xb;s&#x12;1e§A&#xe;js&#x7;J!XT&#x87;fa&#x8e;gÄ&#x12;&#x1a;Ç(&#x82;Ö&#x91;áq&#x1e;&#x1b;y&#x2;Hj¤!AåúS Á	{-R&#x12;&#x16;
+8»CUü9î.dÈ«Ì.G=4&#x0;{Mrkæ&#x94;ªµ8&gt;&#x9a;&#x1c;¥³È-&#x99;ã&#x8d;G&#x6;¯&#x9b;&#x2;&#x81;&#x1f;sYgqí&#x8;&#x14;&#x15;m1®(tÙI&gt;°&#x8f;</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="·&#x0;Ã&#x2;6[7ìl®&lt;¥Ì¨Wðo(òÔ&#x6;­:xùü&#xb;8XF&#x87;ó+&#x10;oT{m{&#x86;&#x1a;?0ä1*´3t&#x8c;ÐÐ©ÕÓz&#x11;¦8¼4ô¨&#xf;&#xa;t×F&#x8a;z&#x9;XF&apos;§m©yvJ&#x14;&#x83;ÿ¯&#x93;&#x8d;rÒÇ á¯W.¾ô&#x1a;&#x94;¹T&#x86;Ý¡&#x95;Ð}&#x1d;#Zv&#x94;²&#x1f;&#x81;&#x6;&#x14;&#x17;" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">·&#x0;Ã&#x2;6[7ìl®&lt;¥Ì¨Wðo(òÔ&#x6;­:xùü&#xb;8XF&#x87;ó+&#x10;oT{m{&#x86;&#x1a;?0ä1*´3t&#x8c;ÐÐ©ÕÓz&#x11;¦8¼4ô¨&#xf;
+t×F&#x8a;z	XF&apos;§m©yvJ&#x14;&#x83;ÿ¯&#x93;&#x8d;rÒÇ á¯W.¾ô&#x1a;&#x94;¹T&#x86;Ý¡&#x95;Ð}&#x1d;#Zv&#x94;²&#x1f;&#x81;&#x6;&#x14;&#x17;</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata"></stringProp>
+                </elementProp>
+                <elementProp name="&#x9c;U&#x89;Ó¸õ" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">&#x9c;U&#x89;Ó¸õ</stringProp>
+                  <stringProp name="Argument.value">¬f&#x9b;&#xc;·âÚÎ&#x8f;;&#x98;ó,½]¼&#x99;#&#x11;&#x95;_&#x1c;&#x9c;
+&#x91;Å8&#x19;ÐÃD&lt;6&#xe;&#x5;g&#x19;äÁÜ¹&#x95;&#x14;&#x2;&#xb;»u³&#x90;&#x1b;¤3&#x81;{×&#xc;.?}Wz4÷Å&#x13;z!©7Y¤&#x91;Ä</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="çï&#x80;½ï&#x19;%$&#x18;ï¦&#x5;Ì&#x86;§é&#x8f;#9&#x99;;&#x95;îë&#x90;N&#xe;/Æð&#xe;v&#x8d;f&#x6;qÂ²ÏU{&#x8e;t&#x17;&#x81;6Û/&#x8d;&#x87;&#x8a;À1&#x17;&#x80;&#x91;L&#x94;¯&#x2;&#x2;&#xf;âbv;§&#x7f;KeüG[ â÷;jý&#xc;Zë`&#x17;ýû&#x86;&#xc;­î_s&#x1d;&#xd;&#x96;y¸!¶·&#x8d;á÷æY!ñh$·¶ú&#x89;l&#x6;Áx" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">çï&#x80;½ï&#x19;%$&#x18;ï¦&#x5;Ì&#x86;§é&#x8f;#9&#x99;;&#x95;îë&#x90;N&#xe;/Æð&#xe;v&#x8d;f&#x6;qÂ²ÏU{&#x8e;t&#x17;&#x81;6Û/&#x8d;&#x87;&#x8a;À1&#x17;&#x80;&#x91;L&#x94;¯&#x2;&#x2;&#xf;âbv;§&#x7f;KeüG[ â÷;jý&#xc;Zë`&#x17;ýû&#x86;&#xc;­î_s&#x1d;&#xd;&#x96;y¸!¶·&#x8d;á÷æY!ñh$·¶ú&#x89;l&#x6;Áx</stringProp>
+                  <stringProp name="Argument.value">µ8ËC&#x16;í°&#x17;oGhWÛu&#x10;P·&#x9d;,V@&#x8b;°0µ&#x16;©Y&#x4;KÐ&#x80;Â&#x87;&#x8a;5&lt;Ó~¸FëC&#xe;ôëOñã&#x97;©î7t¢&#x1c;gø/&#x8f;ù&#x1a;$ºw&#x1e;&#x12;ì½gd&#x13;Þ^Úlh&#x9f;&#x98;b¶</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">android.bugly.qq.com</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/rqd/async?aid=217c2097-a086-44d1-9e12-2bafead3a77b</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="raKey" elementType="Header">
+                  <stringProp name="Header.name">raKey</stringProp>
+                  <stringProp name="Header.value">bHWDEYHHiN1YLJBIFFFLUlJ9LMHjehtZ9m4e7CFTZ5F8s6blgUKYFLPELRT5qO%2B%2BsAFs4%2F6Mx5%2Fz%0A%2BIhxrgL2EXnv0S%2B%2B%2Fvg5F%2Fjo1Cj1Rdh6Ser61YYMlzZrmZNYQ1P9Y5KQKtNhSj3ytS5I02W76unP%0AgIjn3qoSJ6xrbH3E5N0%3D%0A</stringProp>
+                </elementProp>
+                <elementProp name="A37" elementType="Header">
+                  <stringProp name="Header.name">A37</stringProp>
+                  <stringProp name="Header.value">WIFI</stringProp>
+                </elementProp>
+                <elementProp name="appVer" elementType="Header">
+                  <stringProp name="Header.name">appVer</stringProp>
+                  <stringProp name="Header.value">1.0.10</stringProp>
+                </elementProp>
+                <elementProp name="A38" elementType="Header">
+                  <stringProp name="Header.name">A38</stringProp>
+                  <stringProp name="Header.value">WIFI</stringProp>
+                </elementProp>
+                <elementProp name="bundleId" elementType="Header">
+                  <stringProp name="Header.name">bundleId</stringProp>
+                  <stringProp name="Header.value">com.jiuqi.aqfp.android.phone</stringProp>
+                </elementProp>
+                <elementProp name="strategylastUpdateTime" elementType="Header">
+                  <stringProp name="Header.name">strategylastUpdateTime</stringProp>
+                  <stringProp name="Header.value">0</stringProp>
+                </elementProp>
+                <elementProp name="platformId" elementType="Header">
+                  <stringProp name="Header.name">platformId</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="prodId" elementType="Header">
+                  <stringProp name="Header.name">prodId</stringProp>
+                  <stringProp name="Header.value">3667664cf1</stringProp>
+                </elementProp>
+                <elementProp name="sdkVer" elementType="Header">
+                  <stringProp name="Header.name">sdkVer</stringProp>
+                  <stringProp name="Header.value">2.5.0</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+                </elementProp>
+                <elementProp name="cmd" elementType="Header">
+                  <stringProp name="Header.name">cmd</stringProp>
+                  <stringProp name="Header.value">840</stringProp>
+                </elementProp>
+                <elementProp name="wup_version" elementType="Header">
+                  <stringProp name="Header.name">wup_version</stringProp>
+                  <stringProp name="Header.value">3.0</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Dalvik/2.1.0 (Linux; U; Android 5.1.1; OPPO R11 Build/NMF26X)</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="69 /rqd/async?aid=594f864e-9464-428f-9cfc-8b87b2268a9b" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="&#x8c;&#x8;âØ&#x99;jÉÊ|O&#x9e;é¢&#x7f;&#x84;°aèù&#xa;:µ&#xe; óHÃð«S·é&#xf;[5á¹³Õxp&#x9d;äz5ëFÐÖp&#x14;Ï?&#x9b;,&#xf;3&#x8c;&#x83;&#xf;&#x99;U#ø]9&#x9d;{2È&#x1f;ÿÔµX" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">&#x8c;&#x8;âØ&#x99;jÉÊ|O&#x9e;é¢&#x7f;&#x84;°aèù
+:µ&#xe; óHÃð«S·é&#xf;[5á¹³Õxp&#x9d;äz5ëFÐÖp&#x14;Ï?&#x9b;,&#xf;3&#x8c;&#x83;&#xf;&#x99;U#ø]9&#x9d;{2È&#x1f;ÿÔµX</stringProp>
+                  <stringProp name="Argument.value">ê¾&gt;ÌiiÏnÞY&#x80;ýÝEî\oRR¬&#x92;&#x86;ÒÈXa&#x1;¦NKP$mþ&#x80;&#x1e;{ÅËSàÓ&#x9a;[0&#x7;&#x86;Ì÷H9Ì¶&#x88;:j&#x11;Ò¯&#x19;&#x91;sï&#x11;&#x8b;ï&#x8b;&#x9c;Þ&#x4;W¤ßG+Gø?ÎÜ![»&#x1c;nÍ@P&quot;á&#x7f;âà¤Ô&#x86;8a&#x6;&#x8d;ÿ*&#x90;ÛG!&#x19;@¸</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="¾¡&#x85;&quot;*M¶&quot;Ð`&#x80;Ëò&#x1e;V&#x84;xs&#x19;&lt;+&#xd;8ÊóE&#x84;êK{~äþ:&#x8c;&#x80;&#xe;&#x85;7rõã&#x19;®[´&#x90;&#x9b;V&#x4;&#x9f;f" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">¾¡&#x85;&quot;*M¶&quot;Ð`&#x80;Ëò&#x1e;V&#x84;xs&#x19;&lt;+&#xd;8ÊóE&#x84;êK{~äþ:&#x8c;&#x80;&#xe;&#x85;7rõã&#x19;®[´&#x90;&#x9b;V&#x4;&#x9f;f</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata"></stringProp>
+                </elementProp>
+                <elementProp name="&#x9c;I&#x99;«&#x9d;n&#x96;&#xd;&#x86;cç`" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">&#x9c;I&#x99;«&#x9d;n&#x96;&#xd;&#x86;cç`</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata"></stringProp>
+                </elementProp>
+                <elementProp name="RCÔ³&#x9c;TÙ¯YËo®y&#x0;ý&#x11;ÄÆ8Kr[&#x85;¹¯þö&#x11;&#x85;¤&#xe;T&#x98;¡ÛÐÂ&#x1b;Nò¯&#x90;¹ÚY¤ëq&#x84;&#x92;&#x19;Ê #&#x12;&#xf;Å&#x2;ñ&#x84;&#x90;ô&#x8e;&#x1c;$y&#x8;&#xe;Z&apos;&#x13;&#x90;)º$&#xb;¢ÇVÁõÅ¶ßÒu&#xa;·P£1T&#x9d;9e&#x6;¡çt°Ó²¤ë;&#x1f;Ê&#x1e;&#x93;:Ïp?&#x1f;ð&#xf;oT·pSÙQVw&#x17;K7£%¬&#x9a;âîñ¾1HèõÇ&#x9f;ÎñÉ&#x82;²S&#x17;¶öá&#x87;5PU;¤&apos;Þ&#x95;üg&#x94;&#x98;d&#xe;ýLkóîõ&#x18;·ÉDúô&#x15;&#x93;~Ý&#x9a;Â;&#xd;Õ&#x16;&#x5;W¶ÐT&#x13;&quot;Ò[&#x95;Åé&#x9b;0|&#x13;MPÈv&#x95;&#x0;&#x8e;_&#x9e;Z|&#x90;¾ÀÈå`&#x9c;~&#x1a;Í&#x91;½uB&#x9d;å+q&#x4;$&#x7f;&#xa;(º1&#x15;Ý" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">RCÔ³&#x9c;TÙ¯YËo®y&#x0;ý&#x11;ÄÆ8Kr[&#x85;¹¯þö&#x11;&#x85;¤&#xe;T&#x98;¡ÛÐÂ&#x1b;Nò¯&#x90;¹ÚY¤ëq&#x84;&#x92;&#x19;Ê #&#x12;&#xf;Å&#x2;ñ&#x84;&#x90;ô&#x8e;&#x1c;$y&#x8;&#xe;Z&apos;&#x13;&#x90;)º$&#xb;¢ÇVÁõÅ¶ßÒu
+·P£1T&#x9d;9e&#x6;¡çt°Ó²¤ë;&#x1f;Ê&#x1e;&#x93;:Ïp?&#x1f;ð&#xf;oT·pSÙQVw&#x17;K7£%¬&#x9a;âîñ¾1HèõÇ&#x9f;ÎñÉ&#x82;²S&#x17;¶öá&#x87;5PU;¤&apos;Þ&#x95;üg&#x94;&#x98;d&#xe;ýLkóîõ&#x18;·ÉDúô&#x15;&#x93;~Ý&#x9a;Â;&#xd;Õ&#x16;&#x5;W¶ÐT&#x13;&quot;Ò[&#x95;Åé&#x9b;0|&#x13;MPÈv&#x95;&#x0;&#x8e;_&#x9e;Z|&#x90;¾ÀÈå`&#x9c;~&#x1a;Í&#x91;½uB&#x9d;å+q&#x4;$&#x7f;
+(º1&#x15;Ý</stringProp>
+                  <stringProp name="Argument.value">5T~G8³&#x81;&#x88;ýÝ&#x83;&#x9d;&#x87;[F¯àï&#x13;@&#x5;h&#x1d;pd&#x86;S7íá&#x99;&gt;­¨y&#x1a;km&#x15;p8^ê¤â*&#x97;±Ùûðñ&#x17;&#x2; B/¡s¾+!°÷´-&#xb;s&#x12;1e§A&#xe;js&#x7;J!XT&#x87;fa&#x8e;gÄ&#x12;&#x1a;Ç(&#x82;Ö&#x91;áq&#x1e;&#x1b;y&#x2;Hj¤!AåúS Á	{-R&#x12;&#x16;
+8»CUü9î.dÈ«Ì.G=4&#x0;{Mrkæ&#x94;ªµ8&gt;&#x9a;&#x1c;¥³È-&#x99;ã&#x8d;G&#x6;¯&#x9b;&#x2;&#x81;&#x1f;sYgqí&#x8;&#x14;&#x15;m1®(tÙI&gt;°&#x8f;</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="·&#x0;Ã&#x2;6[7ìl®&lt;¥Ì¨Wðo(òÔ&#x6;­:xùü&#xb;8XF&#x87;ó+&#x10;oT{m{&#x86;&#x1a;?0ä1*´3t&#x8c;ÐÐ©ÕÓz&#x11;¦8¼4ô¨&#xf;&#xa;t×F&#x8a;z&#x9;XF&apos;§m©yvJ&#x14;&#x83;ÿ¯&#x93;&#x8d;rÒÇ á¯W.¾ô&#x1a;&#x94;¹T&#x86;Ý¡&#x95;Ð}&#x1d;#Zv&#x94;²&#x1f;&#x81;&#x6;&#x14;&#x17;" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">·&#x0;Ã&#x2;6[7ìl®&lt;¥Ì¨Wðo(òÔ&#x6;­:xùü&#xb;8XF&#x87;ó+&#x10;oT{m{&#x86;&#x1a;?0ä1*´3t&#x8c;ÐÐ©ÕÓz&#x11;¦8¼4ô¨&#xf;
+t×F&#x8a;z	XF&apos;§m©yvJ&#x14;&#x83;ÿ¯&#x93;&#x8d;rÒÇ á¯W.¾ô&#x1a;&#x94;¹T&#x86;Ý¡&#x95;Ð}&#x1d;#Zv&#x94;²&#x1f;&#x81;&#x6;&#x14;&#x17;</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata"></stringProp>
+                </elementProp>
+                <elementProp name="&#x9c;U&#x89;Ó¸õ" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">&#x9c;U&#x89;Ó¸õ</stringProp>
+                  <stringProp name="Argument.value">¬f&#x9b;&#xc;·âÚÎ&#x8f;;&#x98;ó,½]¼&#x99;#&#x11;&#x95;_&#x1c;&#x9c;
+&#x91;Å8&#x19;ÐÃD&lt;6&#xe;&#x5;g&#x19;äÁÜ¹&#x95;&#x14;&#x2;&#xb;»u³&#x90;&#x1b;¤3&#x81;{×&#xc;.?}Wz4÷Å&#x13;z!©7Y¤&#x91;Ä</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="çï&#x80;½ï&#x19;%$&#x18;ï¦&#x5;Ì&#x86;§é&#x8f;#9&#x99;;&#x95;îë&#x90;N&#xe;/Æð&#xe;v&#x8d;f&#x6;qÂ²ÏU{&#x8e;t&#x17;&#x81;6Û/&#x8d;&#x87;&#x8a;À1&#x17;&#x80;&#x91;L&#x94;¯&#x2;&#x2;&#xf;âbv;§&#x7f;KeüG[ â÷;jý&#xc;Zë`&#x17;ýû&#x86;&#xc;­î_s&#x1d;&#xd;&#x96;y¸!¶·&#x8d;á÷æY!ñh$·¶ú&#x89;l&#x6;Áx" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">çï&#x80;½ï&#x19;%$&#x18;ï¦&#x5;Ì&#x86;§é&#x8f;#9&#x99;;&#x95;îë&#x90;N&#xe;/Æð&#xe;v&#x8d;f&#x6;qÂ²ÏU{&#x8e;t&#x17;&#x81;6Û/&#x8d;&#x87;&#x8a;À1&#x17;&#x80;&#x91;L&#x94;¯&#x2;&#x2;&#xf;âbv;§&#x7f;KeüG[ â÷;jý&#xc;Zë`&#x17;ýû&#x86;&#xc;­î_s&#x1d;&#xd;&#x96;y¸!¶·&#x8d;á÷æY!ñh$·¶ú&#x89;l&#x6;Áx</stringProp>
+                  <stringProp name="Argument.value">µ8ËC&#x16;í°&#x17;oGhWÛu&#x10;P·&#x9d;,V@&#x8b;°0µ&#x16;©Y&#x4;KÐ&#x80;Â&#x87;&#x8a;5&lt;Ó~¸FëC&#xe;ôëOñã&#x97;©î7t¢&#x1c;gø/&#x8f;ù&#x1a;$ºw&#x1e;&#x12;ì½gd&#x13;Þ^Úlh&#x9f;&#x98;b¶</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">android.bugly.qq.com</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/rqd/async?aid=594f864e-9464-428f-9cfc-8b87b2268a9b</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="raKey" elementType="Header">
+                  <stringProp name="Header.name">raKey</stringProp>
+                  <stringProp name="Header.value">bHWDEYHHiN1YLJBIFFFLUlJ9LMHjehtZ9m4e7CFTZ5F8s6blgUKYFLPELRT5qO%2B%2BsAFs4%2F6Mx5%2Fz%0A%2BIhxrgL2EXnv0S%2B%2B%2Fvg5F%2Fjo1Cj1Rdh6Ser61YYMlzZrmZNYQ1P9Y5KQKtNhSj3ytS5I02W76unP%0AgIjn3qoSJ6xrbH3E5N0%3D%0A</stringProp>
+                </elementProp>
+                <elementProp name="A37" elementType="Header">
+                  <stringProp name="Header.name">A37</stringProp>
+                  <stringProp name="Header.value">WIFI</stringProp>
+                </elementProp>
+                <elementProp name="appVer" elementType="Header">
+                  <stringProp name="Header.name">appVer</stringProp>
+                  <stringProp name="Header.value">1.0.10</stringProp>
+                </elementProp>
+                <elementProp name="A38" elementType="Header">
+                  <stringProp name="Header.name">A38</stringProp>
+                  <stringProp name="Header.value">WIFI</stringProp>
+                </elementProp>
+                <elementProp name="bundleId" elementType="Header">
+                  <stringProp name="Header.name">bundleId</stringProp>
+                  <stringProp name="Header.value">com.jiuqi.aqfp.android.phone</stringProp>
+                </elementProp>
+                <elementProp name="strategylastUpdateTime" elementType="Header">
+                  <stringProp name="Header.name">strategylastUpdateTime</stringProp>
+                  <stringProp name="Header.value">0</stringProp>
+                </elementProp>
+                <elementProp name="platformId" elementType="Header">
+                  <stringProp name="Header.name">platformId</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="prodId" elementType="Header">
+                  <stringProp name="Header.name">prodId</stringProp>
+                  <stringProp name="Header.value">3667664cf1</stringProp>
+                </elementProp>
+                <elementProp name="sdkVer" elementType="Header">
+                  <stringProp name="Header.name">sdkVer</stringProp>
+                  <stringProp name="Header.value">2.5.0</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+                </elementProp>
+                <elementProp name="cmd" elementType="Header">
+                  <stringProp name="Header.name">cmd</stringProp>
+                  <stringProp name="Header.value">840</stringProp>
+                </elementProp>
+                <elementProp name="wup_version" elementType="Header">
+                  <stringProp name="Header.name">wup_version</stringProp>
+                  <stringProp name="Header.value">3.0</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Dalvik/2.1.0 (Linux; U; Android 5.1.1; OPPO R11 Build/NMF26X)</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>true</responseData>
+              <samplerData>true</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>true</responseHeaders>
+              <requestHeaders>true</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <fileName>true</fileName>
+              <hostname>true</hostname>
+              <threadCounts>true</threadCounts>
+              <sampleCount>true</sampleCount>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

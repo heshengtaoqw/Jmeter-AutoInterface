@@ -1,0 +1,3 @@
+锘縯estModel,testComments,moblieNo(后6位由jmeter生成),password,companyName(后6位由jmeter生成),companyContact,verifyImg,verifySmsCode(万能手机验证码),expectedResult_1（如果手机号已注册）,expectedResult_2
+regist,正常注册,13923810001,123456,自动化测试公司1,111,5555,555555,{"needImgCode":true,"success":true},{"success":true}
+regist,手机号重复,13923810001,123456,自动化测试公司2,111,5555,555555,手机号已注册,{"success":true}

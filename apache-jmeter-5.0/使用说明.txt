@@ -1,0 +1,22 @@
+﻿在本地创建对应的文件夹路径 
+E:\久其软件\自动化测试\Jmeter\apache-jmeter-5.0
+
+
+配置环境变量
+variable name:JMETER_HOME
+variable value:E:\久其软件\自动化测试\Jmeter\apache-jmeter-5.0
+Path:%JMETER_HOME%\bin
+
+
+运行
+E:\久其软件\自动化测试\Jmeter\apache-jmeter-5.0\run.bat
+
+
+查看结果
+
+jmeter运行日志
+E:\久其软件\自动化测试\Jmeter\apache-jmeter-5.0\report\result.log
+E:\久其软件\自动化测试\Jmeter\apache-jmeter-5.0\jmeter.log
+
+测试报告
+E:\久其软件\自动化测试\Jmeter\apache-jmeter-5.0\report\report\index.html

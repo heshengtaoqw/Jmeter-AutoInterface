@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.0 r1840935">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath">E:\久其软件\自动化测试\Jmeter\Jmeter-Ant\apache-jmeter-5.0\lib\mysql-connector-java-5.1.46.jar</stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <JDBCDataSource guiclass="TestBeanGUI" testclass="JDBCDataSource" testname="JDBC Connection Configuration" enabled="true">
+          <boolProp name="autocommit">true</boolProp>
+          <stringProp name="checkQuery"></stringProp>
+          <stringProp name="connectionAge">0</stringProp>
+          <stringProp name="dataSource">test</stringProp>
+          <stringProp name="dbUrl">jdbc:mysql://localhost:3306/stress_test</stringProp>
+          <stringProp name="driver">com.mysql.jdbc.Driver</stringProp>
+          <boolProp name="keepAlive">true</boolProp>
+          <stringProp name="password">123456</stringProp>
+          <stringProp name="poolMax">0</stringProp>
+          <stringProp name="timeout">0</stringProp>
+          <stringProp name="transactionIsolation">DEFAULT</stringProp>
+          <stringProp name="trimInterval">0</stringProp>
+          <stringProp name="username">root</stringProp>
+        </JDBCDataSource>
+        <hashTree/>
+        <SyncTimer guiclass="TestBeanGUI" testclass="SyncTimer" testname="Synchronizing Timer" enabled="true">
+          <intProp name="groupSize">190</intProp>
+          <longProp name="timeoutInMs">0</longProp>
+        </SyncTimer>
+        <hashTree/>
+        <RandomController guiclass="RandomControlGui" testclass="RandomController" testname="Random Controller" enabled="true">
+          <intProp name="InterleaveControl.style">1</intProp>
+        </RandomController>
+        <hashTree>
+          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
+            <stringProp name="BeanShellSampler.query">package mysql;
+ 
+import java.math.BigDecimal;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.sql.Timestamp;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Random;
+ 
+public class InsertSingleMySQL {
+	public static PreparedStatement stmt;
+	public static Connection conn;
+	static BigDecimal b = new BigDecimal(&quot;10&quot;);
+	
+    public static int randomNum(int size)
+    {
+    	Random r = new Random();
+    	return r.nextInt(size);
+    }
+		
+	   public static int getStaffID() {   	
+	    	return randomNum(100000);
+	    }
+	   
+	    
+	    public static String getSex() {
+	    	Random r = new Random();
+	    	if( r.nextInt(2) == 0) {
+	    		return &quot;男&quot;;
+	    	}else {
+	    		return &quot;女&quot;;
+	    	}
+	    }
+	
+	    public static String randomString(int size)
+	    {
+	    	String s = &quot;abcdefghijklmnopqrstuvwxyz12345677890&quot;;
+	    	StringBuffer sb = new StringBuffer();
+	    	for(int i=0;i&lt;size;i++) {
+	    		int index = (int) Math.floor(Math.random() * s.length());
+	    		sb.append(s.charAt(index));
+	    	}
+	    	return sb.toString();
+	    }
+	    
+	    public static Date randomDate() throws ParseException {
+	    	 SimpleDateFormat format = new SimpleDateFormat(&quot;yyyy-MM-dd&quot;);
+	         //定义开始时间
+	         Date start = format.parse(&quot;2019-10-01&quot;);
+	         //定义结束时间
+	         Date end = format.parse(&quot;2019-11-30&quot;);
+	         long date = random(start.getTime(),end.getTime());
+	         return new Date(date);   	
+	    } 
+	    
+	    private static long random(long begin,long end){
+
+	        long rtn = begin + (long)(Math.random() * (end - begin));
+	        //如果返回的是开始时间和结束时间，通过递归调用本函数查找随机值
+	        if(rtn == begin || rtn == end){
+	            return random(begin,end);
+	        }
+	        return rtn;
+	     }
+
+	    
+	    public static void getTimeStamp() throws ParseException {  
+	    	SimpleDateFormat sdf = new SimpleDateFormat(&quot;yyyyMMddHHmmssSSS&quot;);  
+	         sdf.format(randomDate());
+	         
+	      }  
+	    
+	    
+	
+	public static void main(String[] args) throws ParseException, SQLException, ClassNotFoundException{
+		
+		System.out.println(&quot;开始插入...:&quot; + new Date().getTime());
+		String driver = &quot;com.mysql.jdbc.Driver&quot;;
+		String url = &quot;jdbc:mysql://localhost:3306/stress_test?useSSL=false&quot;;
+		String user = &quot;root&quot;;
+		String password = &quot;123456&quot;;
+		String sql = &quot;insert into single values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)&quot;;
+		
+		conn = DriverManager.getConnection(url, user, password);
+		//conn.setAutoCommit(false);
+		stmt = (PreparedStatement) conn.prepareStatement(sql);
+		
+//		Staff_ID (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+//		Tenant_ID
+//		Created_Time
+//		Flow_State
+//		Leave_Type
+//		Others_Long
+//		Bank_Info
+//		Update_Time
+//		Business_Time
+//		Field1
+//		Field2
+//		Field3
+//		Field4
+//		Field5
+//		Field6
+//		Field7
+//		Field8
+//		Field9
+//		Field10
+//		Field11
+//		Field12
+
+
+			
+			
+			try {
+				//java.sql.Date currentDate = new java.sql.Date(System.currentTimeMillis());
+				//Class.forName(driver);	
+				Class.forName(driver);
+				conn = DriverManager.getConnection(url, user, password);
+				stmt = (PreparedStatement) conn.prepareStatement(sql);
+				for(int i=1;i&lt;2;i++) {
+				stmt.setString(1,randomString(10));
+				stmt.setString(2, randomString(10));
+				stmt.setString(3, randomString(10));
+				stmt.setString(4, randomString(10));
+				stmt.setString(5, randomString(10));
+				stmt.setInt(6,randomNum(5));
+				stmt.setInt(7,randomNum(5));
+				stmt.setInt(8,randomNum(5));
+				stmt.setInt(9,randomNum(5));
+				stmt.setInt(10,randomNum(5));
+				stmt.setDouble(11, randomNum(1)*0.11);
+				stmt.setDouble(12, randomNum(1)*0.12);
+				stmt.setDouble(13, randomNum(1)*0.13);
+				stmt.setDouble(14, randomNum(1)*0.14);
+				stmt.setDouble(15, randomNum(1)*0.15);
+				stmt.setDate(16, new java.sql.Date(randomDate().getTime()));
+				stmt.setDate(17, new java.sql.Date(randomDate().getTime()));
+				stmt.setDate(18, new java.sql.Date(randomDate().getTime()));
+				stmt.setDate(19, new java.sql.Date(randomDate().getTime()));
+				stmt.setDate(20, new java.sql.Date(randomDate().getTime()));
+				stmt.executeUpdate();					
+				}
+				
+				
+			//	stmt.executeBatch();
+			//	conn.commit();
+			} catch (SQLException e) {
+				// TODO 自动生成的 catch 块
+				e.printStackTrace();
+			}finally
+		    {
+			      
+			    }
+		
+		if(stmt!= null) 
+	        stmt.close(); 		
+	      if(conn!= null) 
+	        conn.close(); 
+	      System.out.println(&quot;成功插入第&quot;+10000+&quot;数据:&quot; + new Date().getTime());
+	}
+ 
+}
+</stringProp>
+            <stringProp name="BeanShellSampler.filename"></stringProp>
+            <stringProp name="BeanShellSampler.parameters"></stringProp>
+            <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+          </BeanShellSampler>
+          <hashTree/>
+          <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="字符+日期" enabled="false">
+            <stringProp name="dataSource">test</stringProp>
+            <stringProp name="query">insert into single values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)</stringProp>
+            <stringProp name="queryArguments"></stringProp>
+            <stringProp name="queryArgumentsTypes"></stringProp>
+            <stringProp name="queryTimeout"></stringProp>
+            <stringProp name="queryType">Update Statement</stringProp>
+            <stringProp name="resultSetHandler">Store as String</stringProp>
+            <stringProp name="resultVariable"></stringProp>
+            <stringProp name="variableNames"></stringProp>
+          </JDBCSampler>
+          <hashTree/>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>true</responseData>
+              <samplerData>true</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>true</responseHeaders>
+              <requestHeaders>true</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <fileName>true</fileName>
+              <hostname>true</hostname>
+              <threadCounts>true</threadCounts>
+              <sampleCount>true</sampleCount>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="StatGraphVisualizer" testclass="ResultCollector" testname="Aggregate Graph" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>true</responseData>
+              <samplerData>true</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>true</responseHeaders>
+              <requestHeaders>true</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <fileName>true</fileName>
+              <hostname>true</hostname>
+              <threadCounts>true</threadCounts>
+              <sampleCount>true</sampleCount>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.ResponseTimesOverTimeGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="jp@gc - Response Times Over Time" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>true</responseData>
+              <samplerData>true</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>true</responseHeaders>
+              <requestHeaders>true</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <fileName>true</fileName>
+              <hostname>true</hostname>
+              <threadCounts>true</threadCounts>
+              <sampleCount>true</sampleCount>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+          <longProp name="interval_grouping">500</longProp>
+          <boolProp name="graph_aggregated">false</boolProp>
+          <stringProp name="include_sample_labels"></stringProp>
+          <stringProp name="exclude_sample_labels"></stringProp>
+          <stringProp name="start_offset"></stringProp>
+          <stringProp name="end_offset"></stringProp>
+          <boolProp name="include_checkbox_state">false</boolProp>
+          <boolProp name="exclude_checkbox_state">false</boolProp>
+        </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

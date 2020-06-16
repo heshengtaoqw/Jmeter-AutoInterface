@@ -1,0 +1,11 @@
+﻿caseSeq,apiModel,apiSeq,apiName,scenario,priority,port,url,method,parameter,expectedResult
+C0001,login,1.0.0,getVerifyCode,normal,H,80,/verifycode,GET,cellphone=13723818717&ty=true&version=141,成功
+C0002,login,1.0.0,getVerifyCode,normal,H,80,/verifycode,GET,cellphone=13723818abc&ty=false&version=141,成功
+C0003,login,1.0.0,getVerifyCode,normal,H,80,/verifycode,GET,ty=false&version=141,手机号为空
+C0004,login,1.0.0,getVerifyCode,tyIsTrue,H,80,/verifycode,GET,cellphone=13723811807&ty=false&version=141,unregister_telephone":true
+C0005,login,1.0.0,getVerifyCode,tyIsTrue,H,80,/verifycode,GET,cellphone=13723811808&version=141,unregister_telephone":true
+C0006,login,1.0.0,getVerifyCode,tyIsTrue,H,80,/verifycode,GET,cellphone=13723811809&ty=false,成功
+C0007,login,1.0.0,getVerifyCode,tyIsTrue,H,80,/verifycode,GET,cellphone=13723811810&ty=false&version=140,成功
+C0008,login,1.0.0,getVerifyCode,tyIsTrue,H,80,/verifycode,GET,cellphone=13723811811&ty=false&version=abc,成功
+C0009,login,1.0.0,getVerifyCode,normal,H,80,/verifycode,GET,cellphone=13723818717&ty=true&version=141,验证码请求过于频繁，请稍候再试
+C00010,login,1.0.0,getVerifyCode,tyIsTrue,H,80,/verifycode,GET,,手机号为空

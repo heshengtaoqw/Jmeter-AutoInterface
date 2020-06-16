@@ -1,0 +1,2 @@
+testName,moblieNo,password,companyName,companyContact,verifyImg,verifySmsCode(万能手机验证码),chkMoblieNo（如果手机号已注册）,chkCpyName
+regist,13923800009,123456,自动化测试公司9,111,5555,555555,手机号已注册,请输入正确的公司名称
